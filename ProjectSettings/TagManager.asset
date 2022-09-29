@@ -6,6 +6,17 @@ TagManager:
   tags:
   - Target
   - "G\xF6bek"
+  - Train
+  - Red
+  - White
+  - Dark
+  - Orange
+  - Purple
+  - Pink
+  - Blue
+  - Green
+  - Brown
+  - Yellow
   layers:
   - Default
   - TransparentFX

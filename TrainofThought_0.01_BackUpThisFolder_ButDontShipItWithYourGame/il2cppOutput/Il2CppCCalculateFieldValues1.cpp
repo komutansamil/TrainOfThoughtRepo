@@ -510,6 +510,8 @@ struct Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4;
 struct ToggleGroup_tF2E6FE7D4B17BDBF82462715CFB57C4FDE0A2A2C;
 // UnityEngine.TouchScreenKeyboard
 struct TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A;
+// Train
+struct Train_tE98824DD99F675C0AD60D520A462EAE401EB941C;
 // UnityEngine.Transform
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
 // System.Type
@@ -1967,14 +1969,14 @@ struct Enumerator_t49742A61974B06BB73678C5555C3E42E6C843772  : public RuntimeObj
 	int32_t ____index_1;
 };
 
-// Manager/<Timing>d__33
-struct U3CTimingU3Ed__33_t7940FFA29F6C33A9E8C59EBCBEDBAF980AC2D571  : public RuntimeObject
+// Manager/<Timing>d__34
+struct U3CTimingU3Ed__34_t9D28AA28CE7AF899ABB124A379EB3B10308BEF43  : public RuntimeObject
 {
-	// System.Int32 Manager/<Timing>d__33::<>1__state
+	// System.Int32 Manager/<Timing>d__34::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object Manager/<Timing>d__33::<>2__current
+	// System.Object Manager/<Timing>d__34::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// Manager Manager/<Timing>d__33::<>4__this
+	// Manager Manager/<Timing>d__34::<>4__this
 	Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40* ___U3CU3E4__this_2;
 };
 
@@ -2051,14 +2053,14 @@ struct U3CU3Ec_t04E77827D54CC7D69F04FDFC5A84C3F7392F9A76_StaticFields
 	Func_2_tF0A06FF312E9CFC173E3513FCD90DA99BA52B5B1* ___U3CU3E9__38_0_2;
 };
 
-// Station/<Waiting>d__7
-struct U3CWaitingU3Ed__7_t5F3B493C201D7CFACC3D7E0A32E1C1BDE3A73611  : public RuntimeObject
+// Station/<Waiting>d__6
+struct U3CWaitingU3Ed__6_tCEE461ED60B06BA2C729F3EF37B16A210C2AF465  : public RuntimeObject
 {
-	// System.Int32 Station/<Waiting>d__7::<>1__state
+	// System.Int32 Station/<Waiting>d__6::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object Station/<Waiting>d__7::<>2__current
+	// System.Object Station/<Waiting>d__6::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// Station Station/<Waiting>d__7::<>4__this
+	// Station Station/<Waiting>d__6::<>4__this
 	Station_t81780CD061C2A27AE40A9C8239782F423E0B9DDB* ___U3CU3E4__this_2;
 };
 
@@ -2100,6 +2102,17 @@ struct U3CU3Ec_tA35DB2FB45F5681443581EE922D10BC5C693F2A0_StaticFields
 	Predicate_1_t3677E06DFDC31BAFD85DA34E27E6205260F84646* ___U3CU3E9__13_0_1;
 	// System.Func`2<UnityEngine.UI.Toggle,System.Boolean> UnityEngine.UI.ToggleGroup/<>c::<>9__14_0
 	Func_2_t11891D6338A438B6FE4F12664DF54679097E79B9* ___U3CU3E9__14_0_2;
+};
+
+// Train/<Timing>d__9
+struct U3CTimingU3Ed__9_tA4D5927CB9199CB080A84F3A80AE31F6D37FC06B  : public RuntimeObject
+{
+	// System.Int32 Train/<Timing>d__9::<>1__state
+	int32_t ___U3CU3E1__state_0;
+	// System.Object Train/<Timing>d__9::<>2__current
+	RuntimeObject* ___U3CU3E2__current_1;
+	// Train Train/<Timing>d__9::<>4__this
+	Train_tE98824DD99F675C0AD60D520A462EAE401EB941C* ___U3CU3E4__this_2;
 };
 
 // System.Uri/MoreInfo
@@ -7986,6 +7999,8 @@ struct Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40  : public MonoBehaviour
 	bool ___isGameOver_29;
 	// System.Boolean Manager::isTouchedCrossRoad
 	bool ___isTouchedCrossRoad_30;
+	// UnityEngine.GameObject[] Manager::stations
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___stations_31;
 };
 
 // Station
@@ -8019,6 +8034,8 @@ struct Train_tE98824DD99F675C0AD60D520A462EAE401EB941C  : public MonoBehaviour_t
 	bool ___isTouched_7;
 	// System.Boolean Train::isReachedCrossRoad
 	bool ___isReachedCrossRoad_8;
+	// System.String Train::colorName
+	String_t* ___colorName_9;
 };
 
 // UnityEngine.EventSystems.UIBehaviour
@@ -9683,28 +9700,31 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3590[7] =
 	static_cast<int32_t>(offsetof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7, ___straight_CrossRoad_4)),static_cast<int32_t>(offsetof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7, ___turned_CrossRoad_5)),static_cast<int32_t>(offsetof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7, ___isPass_6)),static_cast<int32_t>(offsetof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7, ___crosRoadNumber_7)),static_cast<int32_t>(offsetof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7, ___crossRoadTargets_Straight_8)),static_cast<int32_t>(offsetof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7, ___crossRoadTargets_Turned_9)),static_cast<int32_t>(offsetof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7, ___manager_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3591[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CTimingU3Ed__33_t7940FFA29F6C33A9E8C59EBCBEDBAF980AC2D571, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CTimingU3Ed__33_t7940FFA29F6C33A9E8C59EBCBEDBAF980AC2D571, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CTimingU3Ed__33_t7940FFA29F6C33A9E8C59EBCBEDBAF980AC2D571, ___U3CU3E4__this_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3592[27] = 
+	static_cast<int32_t>(offsetof(U3CTimingU3Ed__34_t9D28AA28CE7AF899ABB124A379EB3B10308BEF43, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CTimingU3Ed__34_t9D28AA28CE7AF899ABB124A379EB3B10308BEF43, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CTimingU3Ed__34_t9D28AA28CE7AF899ABB124A379EB3B10308BEF43, ___U3CU3E4__this_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3592[28] = 
 {
-	static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___managertargets_4)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___kamera_5)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___time_txt_6)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___correctTrainCount_txt_7)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___score_txt_8)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___level_txt_9)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___finishPanelCorrect_txt_10)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___time_Second_11)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___time_Minute_12)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___train_Count_13)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isGameFinished_14)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isActionCompleted_15)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isFree_16)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___earnedTrainCount_17)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___allTrainCount_18)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___trainInstantiatePos_19)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___trains_20)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___finishPanel_21)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___startPanel_22)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___score_23)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___scoreProductCount_24)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___levelCount_25)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___levels_26)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___islevels_27)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isGameStarted_28)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isGameOver_29)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isTouchedCrossRoad_30)),};
+	static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___managertargets_4)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___kamera_5)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___time_txt_6)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___correctTrainCount_txt_7)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___score_txt_8)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___level_txt_9)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___finishPanelCorrect_txt_10)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___time_Second_11)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___time_Minute_12)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___train_Count_13)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isGameFinished_14)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isActionCompleted_15)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isFree_16)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___earnedTrainCount_17)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___allTrainCount_18)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___trainInstantiatePos_19)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___trains_20)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___finishPanel_21)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___startPanel_22)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___score_23)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___scoreProductCount_24)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___levelCount_25)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___levels_26)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___islevels_27)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isGameStarted_28)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isGameOver_29)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___isTouchedCrossRoad_30)),static_cast<int32_t>(offsetof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40, ___stations_31)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3593[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CWaitingU3Ed__7_t5F3B493C201D7CFACC3D7E0A32E1C1BDE3A73611, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CWaitingU3Ed__7_t5F3B493C201D7CFACC3D7E0A32E1C1BDE3A73611, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CWaitingU3Ed__7_t5F3B493C201D7CFACC3D7E0A32E1C1BDE3A73611, ___U3CU3E4__this_2)),};
+	static_cast<int32_t>(offsetof(U3CWaitingU3Ed__6_tCEE461ED60B06BA2C729F3EF37B16A210C2AF465, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CWaitingU3Ed__6_tCEE461ED60B06BA2C729F3EF37B16A210C2AF465, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CWaitingU3Ed__6_tCEE461ED60B06BA2C729F3EF37B16A210C2AF465, ___U3CU3E4__this_2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3594[3] = 
 {
 	static_cast<int32_t>(offsetof(Station_t81780CD061C2A27AE40A9C8239782F423E0B9DDB, ___manager_4)),static_cast<int32_t>(offsetof(Station_t81780CD061C2A27AE40A9C8239782F423E0B9DDB, ___isTouchedTheTrain_5)),static_cast<int32_t>(offsetof(Station_t81780CD061C2A27AE40A9C8239782F423E0B9DDB, ___stationColor_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3595[1] = 
 {
 	static_cast<int32_t>(offsetof(Target_t5E0C0864CEA07701AF639C0AFAC19928DB873FC5, ___index_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3596[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3596[3] = 
 {
-	static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___targets_4)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___target_5)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___manager_6)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___isTouched_7)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___isReachedCrossRoad_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3605[3] = 
+	static_cast<int32_t>(offsetof(U3CTimingU3Ed__9_tA4D5927CB9199CB080A84F3A80AE31F6D37FC06B, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CTimingU3Ed__9_tA4D5927CB9199CB080A84F3A80AE31F6D37FC06B, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CTimingU3Ed__9_tA4D5927CB9199CB080A84F3A80AE31F6D37FC06B, ___U3CU3E4__this_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3597[6] = 
+{
+	static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___targets_4)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___target_5)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___manager_6)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___isTouched_7)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___isReachedCrossRoad_8)),static_cast<int32_t>(offsetof(Train_tE98824DD99F675C0AD60D520A462EAE401EB941C, ___colorName_9)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3606[3] = 
 {
 	static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_nTag_0)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_aValue_1)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___elist_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3610[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3611[3] = 
 {
 	static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___IsTextualNodeBitmap_0)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___CanReadContentAsBitmap_1)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___HasValueBitmap_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3615[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3616[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};
