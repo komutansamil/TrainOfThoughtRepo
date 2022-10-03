@@ -13,8 +13,8 @@ public class Manager : MonoBehaviour
     [SerializeField] TextMeshProUGUI score_txt;
     [SerializeField] TextMeshProUGUI level_txt;
     [SerializeField] TextMeshProUGUI finishPanelCorrect_txt;
-    float time_Second = 3f;
-    int time_Minute = 0;
+    float time_Second = 0f;
+    int time_Minute = 2;
     int train_Count;
     bool isGameFinished = false;
     bool isActionCompleted = false;
