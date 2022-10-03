@@ -13,8 +13,8 @@ public class Manager : MonoBehaviour
     [SerializeField] TextMeshProUGUI score_txt;
     [SerializeField] TextMeshProUGUI level_txt;
     [SerializeField] TextMeshProUGUI finishPanelCorrect_txt;
-    float time_Second = 0f;
-    int time_Minute = 2;
+    float time_Second = 3f;
+    int time_Minute = 0;
     int train_Count;
     bool isGameFinished = false;
     bool isActionCompleted = false;
@@ -69,26 +69,29 @@ public class Manager : MonoBehaviour
             {
                 if (hit.collider.tag == "Göbek")
                 {
-                    if (isFree)
+                    if(touch.phase == TouchPhase.Began)
                     {
-
-                        if (!isActionCompleted)
+                        if (isFree)
                         {
-                            if (hit.collider.gameObject.GetComponent<CrossRoads>().isPass == false)
-                            {
-                                hit.collider.gameObject.GetComponent<CrossRoads>().isPass = true;
-                            }
-                        }
-                        if (isActionCompleted)
-                        {
-                            if (hit.collider.gameObject.GetComponent<CrossRoads>().isPass == true)
-                            {
-                                hit.collider.gameObject.GetComponent<CrossRoads>().isPass = false;
-                            }
-                        }
 
-                        isActionCompleted = !isActionCompleted;
+                            if (!isActionCompleted)
+                            {
+                                if (hit.collider.gameObject.GetComponent<CrossRoads>().isPass == false)
+                                {
+                                    hit.collider.gameObject.GetComponent<CrossRoads>().isPass = true;
+                                }
+                            }
+                            if (isActionCompleted)
+                            {
+                                if (hit.collider.gameObject.GetComponent<CrossRoads>().isPass == true)
+                                {
+                                    hit.collider.gameObject.GetComponent<CrossRoads>().isPass = false;
+                                }
+                            }
 
+                            isActionCompleted = !isActionCompleted;
+
+                        }
                     }
                 }
             }
@@ -98,7 +101,7 @@ public class Manager : MonoBehaviour
 
         correctTrainCount_txt.text = "Correct " + earnedTrainCount.ToString() + " of " + earnedTrainCount.ToString();
 
-        if (isGameStarted)
+        if (isGameStarted && !isGameOver)
         {
             if (time_Minute != 0 && time_Second <= 0)
             {
@@ -107,7 +110,7 @@ public class Manager : MonoBehaviour
             }
             if (!isGameOver)
             {
-                if (time_Second <= 1 && time_Minute <= 1)
+                if (time_Second <= 0 && time_Minute <= 0)
                 {
                     isGameFinished = true;
                 }
@@ -156,7 +159,7 @@ public class Manager : MonoBehaviour
 
     IEnumerator Timing()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(7f);
         if (isGameStarted && !isGameFinished)
         {
             if (levelCount == 0)
