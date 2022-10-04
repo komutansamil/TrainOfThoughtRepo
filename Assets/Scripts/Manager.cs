@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
     int time_Minute = 2;
     int train_Count;
     bool isGameFinished = false;
-    bool isActionCompleted = false;
+    bool isActionCompleted = true;
     public bool isFree = true;
     public int earnedTrainCount;
     public int allTrainCount;
@@ -34,6 +34,8 @@ public class Manager : MonoBehaviour
     public bool isGameOver = false;
     public bool isTouchedCrossRoad = false;
     public GameObject[] stations;
+    bool isFirstTime = false;
+    float waitingTime = 1f;
 
     // Start is called before the first frame update
     void Awake()
@@ -48,7 +50,6 @@ public class Manager : MonoBehaviour
             levels[i].SetActive(false);
         }
         levels[levelCount].SetActive(true);
-        Debug.Log(levelCount);
         isFree = true;
         startPanel.SetActive(true);
         CallAgain();
@@ -159,7 +160,7 @@ public class Manager : MonoBehaviour
 
     IEnumerator Timing()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(waitingTime);
         if (isGameStarted && !isGameFinished)
         {
             if (levelCount == 0)
@@ -192,9 +193,14 @@ public class Manager : MonoBehaviour
                 GameObject train_Instantiated = Instantiate(trains[random],
                     trainInstantiatePos.position, trainInstantiatePos.rotation);
             }
+
+            if (!isFirstTime)
+            {
+                waitingTime = 7f;
+                isFirstTime = true;
+            }
         }
         CallAgain();
-
     }
 
     private void OnApplicationQuit()

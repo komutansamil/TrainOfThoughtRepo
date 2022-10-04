@@ -40,18 +40,18 @@ extern void Manager_Timing_mC151E6BE34FF6BA131AB4B7A8611CA8BC21F2C38 (void);
 extern void Manager_OnApplicationQuit_mF5DA859865C5410D255F9A6BAFEA950907DA2D6C (void);
 // 0x0000000E System.Void Manager::.ctor()
 extern void Manager__ctor_m657ECC756CD44219E6C63B972C78FD4164A0CE1A (void);
-// 0x0000000F System.Void Manager/<Timing>d__34::.ctor(System.Int32)
-extern void U3CTimingU3Ed__34__ctor_mF2159B702BE75F3415AD459F08549095814E1715 (void);
-// 0x00000010 System.Void Manager/<Timing>d__34::System.IDisposable.Dispose()
-extern void U3CTimingU3Ed__34_System_IDisposable_Dispose_mBE67C5925CAC0DBB5B7EEBC5C9014EEA7C67CC4F (void);
-// 0x00000011 System.Boolean Manager/<Timing>d__34::MoveNext()
-extern void U3CTimingU3Ed__34_MoveNext_m02C51D0B4A459A447C4073427FC41325D7890EC1 (void);
-// 0x00000012 System.Object Manager/<Timing>d__34::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CTimingU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m06E82C621BE70E586BAE8DD771A8F7C355A30E31 (void);
-// 0x00000013 System.Void Manager/<Timing>d__34::System.Collections.IEnumerator.Reset()
-extern void U3CTimingU3Ed__34_System_Collections_IEnumerator_Reset_mEC2950C9B8A24A7566498F41E2C31D274DA5D31D (void);
-// 0x00000014 System.Object Manager/<Timing>d__34::System.Collections.IEnumerator.get_Current()
-extern void U3CTimingU3Ed__34_System_Collections_IEnumerator_get_Current_m4AB8F38CC0ABD4442604F3C9833CBBA0A6767E16 (void);
+// 0x0000000F System.Void Manager/<Timing>d__36::.ctor(System.Int32)
+extern void U3CTimingU3Ed__36__ctor_m40957A6B228CA2969A7D62EA6D32366EF86A354E (void);
+// 0x00000010 System.Void Manager/<Timing>d__36::System.IDisposable.Dispose()
+extern void U3CTimingU3Ed__36_System_IDisposable_Dispose_mED8500015D20FC5D552052FB46D3BCF6F27E79AA (void);
+// 0x00000011 System.Boolean Manager/<Timing>d__36::MoveNext()
+extern void U3CTimingU3Ed__36_MoveNext_m44EC829743FBE7BCBE33489F5DF67EA59B352FE1 (void);
+// 0x00000012 System.Object Manager/<Timing>d__36::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CTimingU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFB5F807591D4ED5C009FB8095CF8940B19D52A28 (void);
+// 0x00000013 System.Void Manager/<Timing>d__36::System.Collections.IEnumerator.Reset()
+extern void U3CTimingU3Ed__36_System_Collections_IEnumerator_Reset_m340D545E674C9F95FEF1F0E94BB5448B951F118E (void);
+// 0x00000014 System.Object Manager/<Timing>d__36::System.Collections.IEnumerator.get_Current()
+extern void U3CTimingU3Ed__36_System_Collections_IEnumerator_get_Current_mBC27A29892277562FC4F933738577C5C36BC09E2 (void);
 // 0x00000015 System.Void ScTab::Start()
 extern void ScTab_Start_mDE8279E8FB1E806FDA44E853F6C2E450E43CE053 (void);
 // 0x00000016 System.Void ScTab::Update()
@@ -124,12 +124,12 @@ static Il2CppMethodPointer s_methodPointers[48] =
 	Manager_Timing_mC151E6BE34FF6BA131AB4B7A8611CA8BC21F2C38,
 	Manager_OnApplicationQuit_mF5DA859865C5410D255F9A6BAFEA950907DA2D6C,
 	Manager__ctor_m657ECC756CD44219E6C63B972C78FD4164A0CE1A,
-	U3CTimingU3Ed__34__ctor_mF2159B702BE75F3415AD459F08549095814E1715,
-	U3CTimingU3Ed__34_System_IDisposable_Dispose_mBE67C5925CAC0DBB5B7EEBC5C9014EEA7C67CC4F,
-	U3CTimingU3Ed__34_MoveNext_m02C51D0B4A459A447C4073427FC41325D7890EC1,
-	U3CTimingU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m06E82C621BE70E586BAE8DD771A8F7C355A30E31,
-	U3CTimingU3Ed__34_System_Collections_IEnumerator_Reset_mEC2950C9B8A24A7566498F41E2C31D274DA5D31D,
-	U3CTimingU3Ed__34_System_Collections_IEnumerator_get_Current_m4AB8F38CC0ABD4442604F3C9833CBBA0A6767E16,
+	U3CTimingU3Ed__36__ctor_m40957A6B228CA2969A7D62EA6D32366EF86A354E,
+	U3CTimingU3Ed__36_System_IDisposable_Dispose_mED8500015D20FC5D552052FB46D3BCF6F27E79AA,
+	U3CTimingU3Ed__36_MoveNext_m44EC829743FBE7BCBE33489F5DF67EA59B352FE1,
+	U3CTimingU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFB5F807591D4ED5C009FB8095CF8940B19D52A28,
+	U3CTimingU3Ed__36_System_Collections_IEnumerator_Reset_m340D545E674C9F95FEF1F0E94BB5448B951F118E,
+	U3CTimingU3Ed__36_System_Collections_IEnumerator_get_Current_mBC27A29892277562FC4F933738577C5C36BC09E2,
 	ScTab_Start_mDE8279E8FB1E806FDA44E853F6C2E450E43CE053,
 	ScTab_Update_mE7E38F8FB7B8FD5CE8F045A3E4BA7FC88AE7D2D3,
 	ScTab__ctor_m1E96FB2A64D109FE856D22AF8EF9EC67795A48AF,

@@ -13626,14 +13626,14 @@ struct U3CU3Ec_t8466330897CC37D47C537BF3D889518D35A01596_StaticFields
 	Comparison_1_t9348BD07A42E0B64874D56D54EB3C5984E623BCE* ___U3CU3E9__17_0_1;
 };
 
-// Manager/<Timing>d__34
-struct U3CTimingU3Ed__34_t9D28AA28CE7AF899ABB124A379EB3B10308BEF43  : public RuntimeObject
+// Manager/<Timing>d__36
+struct U3CTimingU3Ed__36_t596459F55F29EF8BC0ADC8FB17DE18E3988478CF  : public RuntimeObject
 {
-	// System.Int32 Manager/<Timing>d__34::<>1__state
+	// System.Int32 Manager/<Timing>d__36::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object Manager/<Timing>d__34::<>2__current
+	// System.Object Manager/<Timing>d__36::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// Manager Manager/<Timing>d__34::<>4__this
+	// Manager Manager/<Timing>d__36::<>4__this
 	Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40* ___U3CU3E4__this_2;
 };
 
@@ -48423,6 +48423,10 @@ struct Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40  : public MonoBehaviour
 	bool ___isTouchedCrossRoad_30;
 	// UnityEngine.GameObject[] Manager::stations
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___stations_31;
+	// System.Boolean Manager::isFirstTime
+	bool ___isFirstTime_32;
+	// System.Single Manager::waitingTime
+	float ___waitingTime_33;
 };
 
 // UnityEngine.UIElements.MinMaxSlider
@@ -57921,7 +57925,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3584 = { sizeof(U3CModuleU3E
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3585;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3585 = { sizeof(CrossRoads_t3CAD946E7FBBDBE81EDBF52E5BF21886A2BC13C7), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3586;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3586 = { sizeof(U3CTimingU3Ed__34_t9D28AA28CE7AF899ABB124A379EB3B10308BEF43), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3586 = { sizeof(U3CTimingU3Ed__36_t596459F55F29EF8BC0ADC8FB17DE18E3988478CF), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3587;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3587 = { sizeof(Manager_t284418B3970F0169BE687FF1F4E8EB6EA614FE40), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3588;
